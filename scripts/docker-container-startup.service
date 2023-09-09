@@ -6,8 +6,8 @@ After=docker.service
 
 [Service]
 Restart=always
-ExecStart=/usr/bin/docker run --gpus all -p 8080:8080 -v $HOME/.tabby:/data --name tabby --rm -d tabbyml/tabby serve --model TabbyML/SantaCoder-1B --device cuda
-ExecStop=/usr/bin/docker stop -t 2 tabby
+ExecStart=/usr/bin/docker run --gpus all -p 8080:8080 -v /var/.tabby:/data --name tabby --rm tabbyml/tabby serve --model TabbyML/SantaCoder-1B --device cuda
+ExecStop=/usr/bin/docker stop tabby
 ExecStopPost=/usr/bin/docker rm -f tabby
 
 [Install]
