@@ -107,6 +107,6 @@ resource "azurerm_linux_virtual_machine" "tabby" {
   #   sku       = "20_04-lts"
   #   version   = "latest"
   # }
-  source_image_id = "/subscriptions/141cceea-a5dc-4813-85df-9bc0d0c29e49/resourceGroups/tabby_group/providers/Microsoft.Compute/images/tabby-server-image"
+  source_image_id = "/subscriptions/141cceea-a5dc-4813-85df-9bc0d0c29e49/resourceGroups/tabby_group/providers/Microsoft.Compute/images/tabby-server"
 }
 
